@@ -20,15 +20,17 @@ target/
 *.iml
 *.ipr
 
+# Config
+application.properties
+application.yml
+.env
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-application.properties
-application.yml
-.env
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/

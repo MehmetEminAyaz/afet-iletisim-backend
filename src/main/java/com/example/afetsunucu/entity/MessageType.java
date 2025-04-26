@@ -4,5 +4,5 @@ public enum MessageType {
     ARAMA,        // Arama kurtarma
     SAGLIK,       // Sağlık yardımı
     MALZEME,      // Gıda, su, barınak
-    HAYATTAYIM    // Bilgilendirme + e-posta
+    HAYATTAYIM
 }

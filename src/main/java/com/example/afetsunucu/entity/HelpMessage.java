@@ -47,7 +47,7 @@ public class HelpMessage {
     @JoinColumn(name = "user_id")
     private User sender;
 
-    // Yeni alanlar:
+
     private String healthType; // Örn: "heartAttack", "minorInjury"
 
     @ElementCollection
