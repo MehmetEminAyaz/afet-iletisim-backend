@@ -2,6 +2,7 @@ package com.example.afetsunucu.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.BatchSize;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -51,12 +52,15 @@ public class HelpMessage {
     private String healthType; // Örn: "heartAttack", "minorInjury"
 
     @ElementCollection
+    @BatchSize(size = 20)
     private List<String> victimNames; // Arama mesajı için isimler
 
     @ElementCollection
+    @BatchSize(size = 20)
     private List<String> emergencyContactEmails; // HAYATTAYIM mesajı için
 
     @ElementCollection
+    @BatchSize(size = 20)
     @CollectionTable(name = "help_message_aid_quantities", joinColumns = @JoinColumn(name = "message_id"))
     @MapKeyColumn(name = "aid_type")
     @Column(name = "quantity")

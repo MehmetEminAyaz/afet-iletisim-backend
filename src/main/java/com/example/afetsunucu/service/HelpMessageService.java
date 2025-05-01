@@ -30,8 +30,9 @@ public class HelpMessageService {
     public HelpMessageResponse createHelpMessage(HelpMessageRequest request) {
         User currentUser = getCurrentUser();
 
-        String fullAddress = request.getBuildingNumber() + " " + request.getStreet() + ", " +
-                request.getNeighborhood() + ", " + request.getDistrict() + ", " + request.getCity();
+        String fullAddress = request.getCity()+ ","+request.getDistrict()+ ","+request.getNeighborhood() +","+request.getStreet()+"," + request.getBuildingNumber();
+
+
 
         GeocodingResult geo = geocodingService.geocode(fullAddress);
 
